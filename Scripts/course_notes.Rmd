@@ -1,0 +1,76 @@
+---
+title: "course_notes"
+author: "baf44"
+date: "4/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This document will be used to take notes and code along with Coursera's Data Science: Foundations using R Specialization. 
+
+### The Data Scientist's Toolbox: Week 4
+## Markdown syntax
+Some examples of Markdown code are:
+**bold**
+*italic*
+--strikethrough--
+[cheatsheet] (https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+## Types of Data Science Questions
+* Descriptive data analysis
+  + Goal: Describe or summarize a set of data
+  + Early analysis when receive new data
+  + Generate simple summaries about the samples and their measurements (e.g., means of central tendency and variance)
+  + NOT for generalizing the results of the analysis to a larger population or trying to make conclusions
+* Exploratory analysis
+  + Goal: examine the data and find relationships that weren't previously known
+  + Explore how different variables might be related
+  + Useful for discovering new connections
+  + Help to formulate hypotheses and drive the design of future studies and data collection
+  + should not be used as a final say for how variables are related
+* Inferential analysis
+  + Goal: use a relatively small sample of data to say something about the population at large
+  + Commonly the goal of statistical modeling
+  + Provide your estimate of the variable for the population and provide your uncertainty about your estimate
+  + Ability to accurately infer information about the larger population depends heavily on the sampling scheme -- if dataset is not representative of the population you are trying to make generalizations about, generalizations will not be accurate 
+* Predictive analysis
+  + Goal: use current and historical data to make predictions about future data
+  + Accuracy in predictions is dependent on measuring the right variables
+  + More date and a simple model generally perform well at predicting future outcomes
+  + Prediction does not mean a causal mechanism
+* Causal analysis
+  + Goal: see what happens to one variable when we manipulate another variable
+  + Gold standard in data analysis
+  + Often applied to the results of randomized studies that were designed to identify causation; difficult to do with observational data
+  + Usually analyzed in aggregate and observed relationships and are usually average effects
+* Mechanistic analysis
+  + Goal: understand exact changes in variables that lead to exact changes in other variables
+  + Applied to simple sitations or those that are nicely modeled by deterministic questions
+  + Commonly applied to physical or engineering sciences -- bio sciences are too noisy
+  + Often, the only noise in the data is measurement error, which can be accounted for
+
+# Data sharing guide
+https://github.com/jtleek/datasharing
+
+## Big data
+* Volume, velocity (collected fast), variety  
+* Sometimes need to work with unstructured data (e.g., text documents, websites)  
+* Challenges: lots to store and analyze, constantly updating, messy, what source and type of data is best?
+* Benefits: lots of data negates small errors, can do real time analyses, can answer unconventional questions, hidden correlations can be resolved
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
